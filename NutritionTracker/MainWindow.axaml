@@ -5,11 +5,20 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="NutritionTracker.MainWindow"
         Title="Nutrition Tracker">
-    <Grid ColumnDefinitions="*,*">
-		<TabStrip Grid.Column="0" Background="Red">
-			<TabStripItem />
-			<TabStripItem/>
-			<TabStripItem/>
+    <Grid ColumnDefinitions="200,*">
+		<TabStrip Grid.Column="0" Background="Red" BorderThickness="0,0,1,0" BorderBrush="Orange"
+            SelectionChanged="OnTabSelectionChanged">
+            <TabStrip.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </TabStrip.ItemsPanel>
+
+			<TabStripItem Tag="UserTab" Content="User"/>
+			<!--<TabStripItem Tag="TrackerTab" Content="Tracker"/>-->
+			<!--<TabStripItem Tag="HistoryTab" Content="History"/>-->
+			<TabStripItem Tag="RecipesTab" Content="Recipes"/>
+			<TabStripItem  Content="About"/>
         </TabStrip>
 
         <ContentControl Grid.Column="1" Name="ContentView"/>

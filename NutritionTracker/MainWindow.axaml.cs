@@ -1,12 +1,29 @@
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 
-namespace NutritionTracker
+namespace NutritionTracker;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
+        InitializeComponent();
+        ContentView.Content = new UserView();
+    }
+
+    private void OnTabSelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        if (sender is TabStrip tab 
+            && tab.SelectedItem is TabStripItem item 
+            && ContentView is not null)
         {
-            InitializeComponent();
+            ContentView.Content = item.Tag switch
+            {
+                "UserTab" => new UserView(),
+                "RecipesTab" => new RecipesView(),
+                _ => new UserView()
+            };
+
         }
     }
 }
