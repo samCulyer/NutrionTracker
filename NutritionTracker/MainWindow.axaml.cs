@@ -23,7 +23,11 @@ public partial class MainWindow : Window
             ContentView.Content = item.Tag switch
             {
                 "UserTab" => new UserView(),
+                "InsightsTab" => new InsightsView(),
                 "RecipesTab" => new RecipesView(),
+                "SettingsTab" => new SettingsView(),
+                "InfoTab" => new InfoView(),
+                "AboutTab" => new AboutView(),
                 _ => new UserView()
             };
 
