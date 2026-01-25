@@ -1,5 +1,8 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
+using Avalonia.Input;
+using Avalonia.Interactivity;
 
 namespace NutritionTracker;
 
@@ -26,4 +29,28 @@ public partial class MainWindow : Window
 
         }
     }
+    private void MainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
+    {
+        if (e.Property == Window.WindowStateProperty)
+        {
+            var isMaximized = WindowState == WindowState.Maximized;
+
+            WindowBorder.CornerRadius = isMaximized ? new CornerRadius(0) : new CornerRadius(5);
+            WindowBorder.BorderThickness = isMaximized ? new Thickness(8) : new Thickness(0);
+        }
+    }
+
+    private void TitleBar_PointerPressed(object sender,PointerPressedEventArgs e) 
+    {
+        if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+        {
+            BeginMoveDrag(e);
+        }
+    }
+    private void Minimize_Click(object sender, RoutedEventArgs e) => this.WindowState = WindowState.Minimized;
+    
+    private void Maximize_Click(object sender, RoutedEventArgs e) => 
+        this.WindowState = this.WindowState == WindowState.Maximized ?
+            WindowState.Normal :WindowState.Maximized;
+    private void Close_Click(object sender, RoutedEventArgs e) => Close();
 }

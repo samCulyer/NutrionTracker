@@ -4,23 +4,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="NutritionTracker.MainWindow"
-        Title="Nutrition Tracker">
-    <Grid ColumnDefinitions="200,*">
-		<TabStrip Grid.Column="0" Background="Red" BorderThickness="0,0,1,0" BorderBrush="Orange"
-            SelectionChanged="OnTabSelectionChanged">
-            <TabStrip.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical"/>
-                </ItemsPanelTemplate>
-            </TabStrip.ItemsPanel>
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="32"
+        PropertyChanged="MainWindow_PropertyChanged"
+        Title="Nutrition Tracker"
+        Background="Transparent">
+    <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True" Background="Black">
 
-			<TabStripItem Tag="UserTab" Content="User"/>
-			<!--<TabStripItem Tag="TrackerTab" Content="Tracker"/>-->
-			<!--<TabStripItem Tag="HistoryTab" Content="History"/>-->
-			<TabStripItem Tag="RecipesTab" Content="Recipes"/>
-			<TabStripItem  Content="About"/>
-        </TabStrip>
+        <Grid RowDefinitions="32,*" >
 
-        <ContentControl Grid.Column="1" Name="ContentView"/>
-    </Grid>
+            <Grid Name="TitleBar" ColumnDefinitions="Auto,*,Auto" PointerPressed="TitleBar_PointerPressed" Background="Transparent">
+				<Button Grid.Column="0" DockPanel.Dock="Left" Content="-"
+                    Width="32"
+                    Height="32"/>
+
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Nutition Tracker"/>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Click="Minimize_Click" DockPanel.Dock="Right" Content="-"/>
+                    <Button Click="Maximize_Click" DockPanel.Dock="Right" Content="d"/>
+                    <Button Click="Close_Click" DockPanel.Dock="Right" Content="X"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" ColumnDefinitions="200,*">
+		        <TabStrip Grid.Column="0" BorderThickness="0,0,1,0" BorderBrush="Orange"
+                    SelectionChanged="OnTabSelectionChanged">
+                    <TabStrip.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </TabStrip.ItemsPanel>
+
+			        <TabStripItem Tag="UserTab" Content="Profile"/>
+			        <TabStripItem Tag="TodayTab" Content="Today"/>
+			        <TabStripItem Tag="InsightsTab" Content="Insights"/>
+			        <TabStripItem Tag="RecipesTab" Content="Recipes"/>
+			        <TabStripItem Tag="InfoTab" Content="Info"/>
+			        <TabStripItem Tag="SettingsTab" Content="Settings"/>
+			        <TabStripItem Tag="AboutTab" Content="About"/>
+                </TabStrip>
+
+                <ContentControl Grid.Column="1" Name="ContentView"/>
+            </Grid>
+			
+        </Grid>
+		
+    </Border>
 </Window>
