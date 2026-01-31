@@ -10,7 +10,7 @@
         PropertyChanged="MainWindow_PropertyChanged"
         Title="Nutrition Tracker"
         Background="Transparent">
-    <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True" Background="Black">
+    <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True">
 
         <Grid RowDefinitions="32,*" >
 

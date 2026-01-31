@@ -3,11 +3,13 @@ using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using NutritionTracker.Views.Settings;
 
 namespace NutritionTracker;
 
 public partial class MainWindow : Window
 {
+    public SettingsViewModel SettingsViewModel { get; } = new();
     public MainWindow()
     {
         InitializeComponent();
@@ -25,7 +27,7 @@ public partial class MainWindow : Window
                 "UserTab" => new UserView(),
                 "InsightsTab" => new InsightsView(),
                 "RecipesTab" => new RecipesView(),
-                "SettingsTab" => new SettingsView(),
+                "SettingsTab" => new SettingsView(SettingsViewModel),
                 "InfoTab" => new InfoView(),
                 "AboutTab" => new AboutView(),
                 _ => new UserView()
