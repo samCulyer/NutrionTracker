@@ -1,3 +1,4 @@
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
@@ -9,10 +10,16 @@ namespace NutritionTracker;
 
 public partial class MainWindow : Window
 {
-    public SettingsViewModel SettingsViewModel { get; } = new();
+    private SettingsViewModel SettingsViewModel { get; } = new();
     public MainWindow()
     {
         InitializeComponent();
+        if (OperatingSystem.IsLinux())
+        {
+            this.ExtendClientAreaToDecorationsHint = false;
+            TitleBarGrid.IsVisible = false;
+            TitleBarGrid.Height = 0;
+        }
         ContentView.Content = new UserView();
     }
 
