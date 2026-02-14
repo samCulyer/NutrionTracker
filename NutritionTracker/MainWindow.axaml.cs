@@ -4,12 +4,14 @@ using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using NutritionTracker.Data;
 using NutritionTracker.Views.Settings;
 
 namespace NutritionTracker;
 
 public partial class MainWindow : Window
 {
+    private DataStore DataStore { get; } = new();
     private SettingsViewModel SettingsViewModel { get; } = new();
     public MainWindow()
     {

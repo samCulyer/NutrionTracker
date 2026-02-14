@@ -1,13 +1,15 @@
 using Avalonia.Controls;
-using NutritionTracker.Views.Settings;
 
-namespace NutritionTracker;
-
+namespace NutritionTracker.Views.Settings;
 public partial class SettingsView : UserControl
 {
-    public SettingsView(SettingsViewModel vm)
+    public SettingsView()
     {
         InitializeComponent();
+    }
+
+    public SettingsView(SettingsViewModel vm) : this()
+    {
         DataContext = vm;
     }
 }

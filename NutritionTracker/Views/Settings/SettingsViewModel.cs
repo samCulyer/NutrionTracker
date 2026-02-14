@@ -1,6 +1,4 @@
 ﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Media;
 using Avalonia.Styling;
 using NutritionTracker.Data;
 using System.Collections.ObjectModel;
@@ -10,11 +8,11 @@ namespace NutritionTracker.Views.Settings;
 public class SettingsViewModel : BaseViewModel
 {
     public ObservableCollection<ThemeVariant> Themes { get; } =
-        new()
-        {
+        [
+            ThemeVariant.Default,
             ThemeVariant.Light,
             ThemeVariant.Dark,
-        };
+        ];
 
     public ThemeVariant? CurrentTheme
     {

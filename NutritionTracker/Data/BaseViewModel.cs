@@ -1,14 +1,7 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
+﻿
 namespace NutritionTracker.Data;
 
-public class BaseViewModel : INotifyPropertyChanged
+public class BaseViewModel : NotifyChanged
 {
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null) 
-    { 
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    } 
+    
 }
