@@ -39,6 +39,7 @@ public partial class MainWindow : Window
             ContentView.Content = item.Tag switch
             {
                 "UserTab" => new UserView(),
+                "FoodLogTab" => new FoodLogView(),
                 "InsightsTab" => new InsightsView(),
                 "RecipesTab" => new RecipesView(),
                 "SettingsTab" => new SettingsView(SettingsViewModel),

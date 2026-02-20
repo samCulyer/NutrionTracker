@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="NutritionTracker.FoodLogView">
+  <Grid RowDefinitions="*,auto,*">
+	  <ScrollViewer Grid.Row="0" >
+		  <StackPanel>
+			  <ProgressBar Value="20"/>
+			  <ProgressBar Value="60"/>
+			  <ProgressBar Value="80"/>
+          </StackPanel>
+      </ScrollViewer>
+
+      <GridSplitter Grid.Row="1"/>
+
+    <DataGrid Grid.Row="2">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="First Name" />
+            <DataGridTextColumn Header="Last Name" />
+        </DataGrid.Columns>
+    </DataGrid>
+
+  </Grid>
+</UserControl>

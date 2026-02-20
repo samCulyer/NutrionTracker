@@ -42,7 +42,7 @@
                     </TabStrip.ItemsPanel>
 
 			        <TabStripItem Tag="UserTab" Content="Profile"/>
-			        <TabStripItem Tag="FoodLogTab" Content="Today"/>
+			        <TabStripItem Tag="FoodLogTab" Content="Food Log"/>
 			        <TabStripItem Tag="InsightsTab" Content="Insights"/>
 			        <TabStripItem Tag="RecipesTab" Content="Recipes"/>
 			        <TabStripItem Tag="InfoTab" Content="Info"/>

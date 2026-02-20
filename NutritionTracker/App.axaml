@@ -7,6 +7,7 @@
     <!--style with selectors-->
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="avares://NutritionTracker/Resources/BaseStyles.axaml" />
     </Application.Styles>
 
     <!--controlthemes and resources such as brushes-->
