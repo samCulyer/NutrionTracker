@@ -13,4 +13,9 @@
 		<Setter Property="ShowProgressText" Value="True"/>
 		<Setter Property="FontSize" Value="10"/>
 	</Style>
+
+ <!-- <Style   Selector="Button.Close">
+		<Setter Property="Background" Value="Red"/>
+		<Setter Property="CornerRadius" Value="0"/>
+	</Style>-->
 </Styles>

@@ -5,11 +5,15 @@
 
    <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key='Light'>
+            <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseLight.png</Bitmap>
+
             <Color x:Key="Background">#FFE7E7E7</Color> 
 
             <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}"/> 
         </ResourceDictionary>
         <ResourceDictionary x:Key='Dark'>
+            <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseDark.png</Bitmap>
+
             <Color x:Key="Background">#FF1A1A1A</Color> 
 
             <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}"/>
