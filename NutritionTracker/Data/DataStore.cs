@@ -2,7 +2,7 @@ namespace NutritionTracker.Data;
 
 public class DataStore : NotifyChanged
 {
-    private int _fontSize = 20;
+    private int _fontSize = 12;
     public int FontSize
     {
         get => _fontSize;

@@ -11,11 +11,16 @@ namespace NutritionTracker;
 
 public partial class MainWindow : Window
 {
-    private DataStore DataStore { get; } = new();
-    private SettingsViewModel SettingsViewModel { get; } = new();
+    //private DataStore DataStore { get;} 
+    private SettingsViewModel SettingsViewModel { get;}
     public MainWindow()
     {
         InitializeComponent();
+
+        var datastore =((App)Application.Current!).DataStore;
+        DataContext = datastore;
+        SettingsViewModel = new SettingsViewModel(datastore);
+
         if (OperatingSystem.IsLinux())
         {
             this.ExtendClientAreaToDecorationsHint = false;

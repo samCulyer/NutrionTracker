@@ -4,12 +4,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="NutritionTracker.MainWindow"
+        xmlns:data="using:NutritionTracker.Data"
+        x:DataType="data:DataStore"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="32"
         PropertyChanged="MainWindow_PropertyChanged"
         Title="Nutrition Tracker"
-        Background="Transparent">
+        Background="Transparent" FontSize="{Binding FontSize}">
     <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True">
 
         <Grid RowDefinitions="Auto,*" >
@@ -50,7 +52,7 @@
 
                 <Border Grid.Column="1" Width="2" Background="{DynamicResource SystemAccentColor}" 
                     CornerRadius="5" Margin="0,10,0,10"/>
-                <ContentControl Grid.Column="2" Name="ContentView"/>
+                <ContentControl Grid.Column="2" Margin="20" Name="ContentView"/>
             </Grid>
 			
         </Grid>
