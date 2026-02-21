@@ -7,16 +7,32 @@
         <ResourceDictionary x:Key='Light'>
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseLight.png</Bitmap>
 
-            <Color x:Key="Background">#FFE7E7E7</Color> 
+            <Color x:Key="BackgroundColour">#FFE7E7E7</Color> 
+            <Color x:Key="CloseButtonColour">#80e63737</Color> 
+            <Color x:Key="CloseButtonHoverColour">#80ff3d3d</Color> 
+            <Color x:Key="MinMaxButtonColour">#804645e6</Color> 
+            <Color x:Key="MinMaxButtonHoverColour">#805958e9</Color> 
 
-            <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}"/> 
+            <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColour}"/> 
+            <SolidColorBrush x:Key="CloseBrush" Color="{StaticResource CloseButtonColour}"/> 
+            <SolidColorBrush x:Key="CloseHoverBrush" Color="{StaticResource CloseButtonHoverColour}"/> 
+            <SolidColorBrush x:Key="MinMaxBrush" Color="{StaticResource MinMaxButtonColour}"/> 
+            <SolidColorBrush x:Key="MinMaxHoverBrush" Color="{StaticResource MinMaxButtonHoverColour}"/> 
         </ResourceDictionary>
         <ResourceDictionary x:Key='Dark'>
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseDark.png</Bitmap>
 
-            <Color x:Key="Background">#FF1A1A1A</Color> 
+            <Color x:Key="BackgroundColour">#FF1A1A1A</Color>
+            <Color x:Key="CloseButtonColour">#80ff3d3d</Color> 
+            <Color x:Key="CloseButtonHoverColour">#80ff6464</Color> 
+            <Color x:Key="MinMaxButtonColour">#802220ff</Color> 
+            <Color x:Key="MinMaxButtonHoverColour">#804e4dff</Color> 
 
-            <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource Background}"/>
+            <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColour}"/>
+            <SolidColorBrush x:Key="CloseBrush" Color="{StaticResource CloseButtonColour}"/> 
+            <SolidColorBrush x:Key="CloseHoverBrush" Color="{StaticResource CloseButtonHoverColour}"/>
+            <SolidColorBrush x:Key="MinMaxBrush" Color="{StaticResource MinMaxButtonColour}"/> 
+            <SolidColorBrush x:Key="MinMaxHoverBrush" Color="{StaticResource MinMaxButtonHoverColour}"/> 
         </ResourceDictionary>
       </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

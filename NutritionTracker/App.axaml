@@ -10,13 +10,4 @@
         <StyleInclude Source="avares://NutritionTracker/Resources/BaseStyles.axaml" />
     </Application.Styles>
 
-    <!--controlthemes and resources such as brushes-->
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-              <MergeResourceInclude Source="avares://NutritionTracker/Resources/Base.axaml" />
-              <MergeResourceInclude Source="avares://NutritionTracker/Resources/Themes.axaml" />
-            </ResourceDictionary.MergedDictionaries>
-          </ResourceDictionary>
-    </Application.Resources>
 </Application>

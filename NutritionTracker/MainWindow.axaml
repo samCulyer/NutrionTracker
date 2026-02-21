@@ -12,7 +12,7 @@
         PropertyChanged="MainWindow_PropertyChanged"
         Title="Nutrition Tracker"
         Background="Transparent" FontSize="{Binding FontSize}">
-    <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True">
+    <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True" Classes="window">
 
         <Grid RowDefinitions="Auto,*" >
 
@@ -26,9 +26,9 @@
                     HorizontalAlignment="Center" Text="Nutrition Tracker"/>
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Button Click="Minimize_Click" DockPanel.Dock="Right" Content="-"/>
-                    <Button Click="Maximize_Click" DockPanel.Dock="Right" Content="d"/>
-                    <Button Click="Close_Click" DockPanel.Dock="Right" Padding="3" Classes="Close">
+                    <Button Click="Minimize_Click" DockPanel.Dock="Right" Content="-" Classes="window-minmax"/>
+                    <Button Click="Maximize_Click" DockPanel.Dock="Right" Content="d" Classes="window-minmax"/>
+                    <Button Click="Close_Click" DockPanel.Dock="Right" Padding="3" Classes="window-close">
 						<Image Source="{DynamicResource CloseIcon}"/>
                     </Button>
                 </StackPanel>

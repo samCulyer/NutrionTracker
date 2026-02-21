@@ -6,7 +6,19 @@
     </Border>
   </Design.PreviewWith>
 
-  <Style Selector="ProgressBar">
+	<Styles.Resources>
+		<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+              <MergeResourceInclude Source="avares://NutritionTracker/Resources/Themes.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+          </ResourceDictionary>
+	</Styles.Resources>
+
+	<Style Selector="Border.window">
+		<Setter Property="Background" Value="{DynamicResource BackgroundBrush}"/>
+	</Style>
+
+	<Style Selector="ProgressBar">
 		<Setter Property="Foreground" Value="{DynamicResource SystemAccentColor}"/>
 		<Setter Property="Height" Value="12"/>
 		<Setter Property="Margin" Value="10"/>
@@ -14,8 +26,22 @@
 		<Setter Property="FontSize" Value="10"/>
 	</Style>
 
- <!-- <Style   Selector="Button.Close">
-		<Setter Property="Background" Value="Red"/>
-		<Setter Property="CornerRadius" Value="0"/>
-	</Style>-->
+	<Style Selector="Button.window-close">
+		<Setter Property="Background" Value="{DynamicResource CloseBrush}"/>
+		<Setter Property="CornerRadius" Value="0,0,0,0"/>
+		<Setter Property="Margin" Value="0,0,0,0"/>
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource CloseHoverBrush}"/>
+		</Style>
+	</Style>
+
+	<Style Selector="Button.window-minmax">
+		<Setter Property="Background" Value="{DynamicResource MinMaxBrush}"/>
+		<Setter Property="CornerRadius" Value="0,0,0,0"/>
+		<Setter Property="Margin" Value="0,0,0,0"/>
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource MinMaxHoverBrush}"/>
+		</Style>
+	</Style>
+ 
 </Styles>
