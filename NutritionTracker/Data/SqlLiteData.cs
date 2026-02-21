@@ -26,17 +26,6 @@ public sealed class SqlLiteData
 
     private void CreateDatabase() 
     {
-        //error use sqllite instead of sqllite.core? 
-        //install Nuget Package Microsoft.Data.Sqlite(not Microsoft.Data.Sqlite.Core). (my version is 2.2.2)
-
-        //    and use SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_e_sqlite3());
-
-        //connection = new SqliteConnection("Data Source = Sample.db");
-
-        //SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_e_sqlite3());
-
-        //connection.Open();
-        //but I advise use nuget package System.Data.SQLite instead Microsoft.Data.Sqlite
         using SqliteConnection connection = new(connectionstring);
         connection.Open();
 
