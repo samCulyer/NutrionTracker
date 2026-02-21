@@ -2,6 +2,7 @@ namespace NutritionTracker.Data;
 
 public class DataStore : NotifyChanged
 {
+    public SqlLiteData SqlData { get; }
     private int _fontSize = 12;
     public int FontSize
     {
@@ -14,5 +15,10 @@ public class DataStore : NotifyChanged
                 OnPropertyChanged();
             }
         }
-    } 
+    }
+
+    public DataStore() 
+    {
+        SqlData = SqlLiteData.Instance;
+    }
 }
