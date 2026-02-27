@@ -26,9 +26,13 @@
                     HorizontalAlignment="Center" Text="Nutrition Tracker"/>
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Button Click="Minimize_Click" DockPanel.Dock="Right" Content="-" Classes="window-minmax"/>
-                    <Button Click="Maximize_Click" DockPanel.Dock="Right" Content="d" Classes="window-minmax"/>
-                    <Button Click="Close_Click" DockPanel.Dock="Right" Padding="3" Classes="window-close">
+                    <Button Click="Minimize_Click" DockPanel.Dock="Right" Classes="window-minmax">
+                        <Image Source="{DynamicResource MinimizeIcon}"/>
+                    </Button>
+                    <Button Click="Maximize_Click" DockPanel.Dock="Right" Classes="window-minmax">
+						<Image Source="{DynamicResource MaximizeIcon}"/>
+                    </Button>
+                    <Button Click="Close_Click" DockPanel.Dock="Right" Classes="window-close">
 						<Image Source="{DynamicResource CloseIcon}"/>
                     </Button>
                 </StackPanel>

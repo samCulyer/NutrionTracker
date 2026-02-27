@@ -24,5 +24,9 @@
   <ItemGroup>
     <AvaloniaResource Include="Images\CloseDark.png" />
     <AvaloniaResource Include="Images\CloseLight.png" />
+    <AvaloniaResource Include="Images\MaximizeDark.png" />
+    <AvaloniaResource Include="Images\MaximizeLight.png" />
+    <AvaloniaResource Include="Images\MinimizeDark.png" />
+    <AvaloniaResource Include="Images\MinimizeLight.png" />
   </ItemGroup>
 </Project>

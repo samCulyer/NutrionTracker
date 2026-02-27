@@ -6,6 +6,8 @@
    <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key='Light'>
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseLight.png</Bitmap>
+            <Bitmap x:Key="MaximizeIcon">avares://NutritionTracker/Images/MaximizeLight.png</Bitmap>
+            <Bitmap x:Key="MinimizeIcon">avares://NutritionTracker/Images/MinimizeLight.png</Bitmap>
 
             <Color x:Key="BackgroundColour">#FFE7E7E7</Color> 
             <Color x:Key="CloseButtonColour">#80e63737</Color> 
@@ -21,6 +23,8 @@
         </ResourceDictionary>
         <ResourceDictionary x:Key='Dark'>
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseDark.png</Bitmap>
+            <Bitmap x:Key="MaximizeIcon">avares://NutritionTracker/Images/MaximizeDark.png</Bitmap>
+            <Bitmap x:Key="MinimizeIcon">avares://NutritionTracker/Images/MinimizeDark.png</Bitmap>
 
             <Color x:Key="BackgroundColour">#FF1A1A1A</Color>
             <Color x:Key="CloseButtonColour">#80ff3d3d</Color> 
