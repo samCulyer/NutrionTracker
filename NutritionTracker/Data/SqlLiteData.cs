@@ -21,28 +21,12 @@ public sealed class SqlLiteData
             ? "TestDatabase.db"
             : "Database.db";
 
-        string dbPath = Path.Combine(folderPath, "Database.db");
-        ConnectionString = $"Data Source={dbPath};Cache=Shared";
+        string dbPath = Path.Combine(folderPath, dbName);
+        ConnectionString = $"Data Source={dbPath};Cache=Shared;Foreign Keys=True";
 
         Directory.CreateDirectory(folderPath);
-        CreateDatabase();
     }
 
-    private void CreateDatabase() 
-    {
-        using SqliteConnection connection = new(ConnectionString);
-        connection.Open();
-
-        using var command = connection.CreateCommand();
-
-        command.CommandText = "CREATE TABLE IF NOT EXISTS Ingredients " +
-            "(Name VARCHAR(20), Weight DOUBLE)";
-        command.ExecuteNonQuery();
-
-        command.CommandText = "CREATE TABLE IF NOT EXISTS TestIngredients " +
-            "(Name VARCHAR(20), Weight DOUBLE)";
-        command.ExecuteNonQuery();
-    }
 
     public async Task PopulateTestTable() 
     {
@@ -54,7 +38,7 @@ public sealed class SqlLiteData
 
         await using var command = connection.CreateCommand();
 
-        command.CommandText = "INSERT INTO TestIngredients (Name, Weight) " +
+        command.CommandText = "INSERT INTO Ingredients (Name, Weight) " +
             "VALUES (@name, @weight)";
         command.Parameters.AddWithValue("@name", name);
         command.Parameters.AddWithValue("@weight", weight);

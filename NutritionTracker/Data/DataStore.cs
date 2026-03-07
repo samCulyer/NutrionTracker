@@ -20,5 +20,7 @@ public class DataStore : NotifyChanged
     public DataStore(DataSource source = DataSource.Live) 
     {
         SqlData = new SqlLiteData(source);
+        SqlDatabaseBuilder sqlBuilder = new(source);
+        sqlBuilder.CreateDatabase();
     }
 }
