@@ -17,8 +17,8 @@ public class DataStore : NotifyChanged
         }
     }
 
-    public DataStore() 
+    public DataStore(DataSource source = DataSource.Live) 
     {
-        SqlData = SqlLiteData.Instance;
+        SqlData = new SqlLiteData(source);
     }
 }

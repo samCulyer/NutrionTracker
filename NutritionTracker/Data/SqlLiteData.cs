@@ -8,25 +8,29 @@ namespace NutritionTracker.Data;
 
 public sealed class SqlLiteData
 {
+    public string ConnectionString { get; }
 
-    private static string documentsPath =
-        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-    private static string folderPath =
-        Path.Combine(documentsPath, "NutritionTrackerData");
-    private static string dbPath = Path.Combine(folderPath, "NTDatabase.db");
-    private static string connectionstring = $"Data Source={dbPath};Cache=Shared";
-
-    private static readonly SqlLiteData _instance = new();
-    public static SqlLiteData Instance => _instance;
-    private SqlLiteData() 
+    public SqlLiteData(DataSource source) 
     {
+        string documentsPath =
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        string folderPath =
+            Path.Combine(documentsPath, "NutritionTrackerData");
+
+        string dbName = source == DataSource.Test
+            ? "TestDatabase.db"
+            : "Database.db";
+
+        string dbPath = Path.Combine(folderPath, "Database.db");
+        ConnectionString = $"Data Source={dbPath};Cache=Shared";
+
         Directory.CreateDirectory(folderPath);
         CreateDatabase();
     }
 
     private void CreateDatabase() 
     {
-        using SqliteConnection connection = new(connectionstring);
+        using SqliteConnection connection = new(ConnectionString);
         connection.Open();
 
         using var command = connection.CreateCommand();
@@ -42,7 +46,7 @@ public sealed class SqlLiteData
 
     public async Task PopulateTestTable() 
     {
-        await using SqliteConnection connection = new(connectionstring);
+        await using SqliteConnection connection = new(ConnectionString);
         await connection.OpenAsync();
 
         string name = "mince";
