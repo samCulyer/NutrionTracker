@@ -29,4 +29,19 @@
     <AvaloniaResource Include="Images\MinimizeDark.png" />
     <AvaloniaResource Include="Images\MinimizeLight.png" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Lang\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Lang\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
