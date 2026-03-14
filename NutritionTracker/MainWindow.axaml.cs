@@ -5,6 +5,7 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using NutritionTracker.Data;
+using NutritionTracker.Views.About;
 using NutritionTracker.Views.Settings;
 
 namespace NutritionTracker;
@@ -13,6 +14,7 @@ public partial class MainWindow : Window
 {
     //private DataStore DataStore { get;} 
     private SettingsViewModel SettingsViewModel { get;}
+    private AboutViewModel AboutViewModel { get;}
     public MainWindow()
     {
         InitializeComponent();
@@ -20,6 +22,7 @@ public partial class MainWindow : Window
         var datastore =((App)Application.Current!).DataStore;
         DataContext = datastore;
         SettingsViewModel = new SettingsViewModel(datastore);
+        AboutViewModel = new AboutViewModel();
 
         if (OperatingSystem.IsLinux())
         {
@@ -44,7 +47,7 @@ public partial class MainWindow : Window
                 "RecipesTab" => new RecipesView(),
                 "SettingsTab" => new SettingsView(SettingsViewModel),
                 "InfoTab" => new InfoView(),
-                "AboutTab" => new AboutView(),
+                "AboutTab" => new AboutView(AboutViewModel),
                 _ => new UserView()
             };
 

@@ -47,5 +47,11 @@
 			<Setter Property="Background" Value="{DynamicResource MinMaxHoverBrush}"/>
 		</Style>
 	</Style>
+	
+	<Style Selector="Border.separator">
+		<Setter Property="Background" Value="{DynamicResource SeparatorBrush}"/>
+		<Setter Property="Margin" Value="10"/>
+		<Setter Property="CornerRadius" Value="5"/>
+	</Style>
  
 </Styles>
