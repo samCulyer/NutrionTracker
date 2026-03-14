@@ -50,6 +50,7 @@ public class SqlDatabaseBuilder
         command.CommandText = "CREATE TABLE IF NOT EXISTS Nutrients " +
                               "(Id INTEGER PRIMARY KEY, " +
                               "Name TEXT NOT NULL, " +
+                              "NameAlternate TEXT, " +
                               "Unit TEXT) ";
         command.ExecuteNonQuery();
         //milligram 1 thousandth of a gram mg
