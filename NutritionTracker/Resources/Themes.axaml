@@ -8,6 +8,7 @@
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseLight.png</Bitmap>
             <Bitmap x:Key="MaximizeIcon">avares://NutritionTracker/Images/MaximizeLight.png</Bitmap>
             <Bitmap x:Key="MinimizeIcon">avares://NutritionTracker/Images/MinimizeLight.png</Bitmap>
+            <Bitmap x:Key="BurgerIcon">avares://NutritionTracker/Images/BurgerLight.png</Bitmap>
 
             <Color x:Key="BackgroundColour">#FFE7E7E7</Color> 
             <Color x:Key="SeparatorColour">#FFA2A2A2</Color> 
@@ -27,6 +28,7 @@
             <Bitmap x:Key="CloseIcon">avares://NutritionTracker/Images/CloseDark.png</Bitmap>
             <Bitmap x:Key="MaximizeIcon">avares://NutritionTracker/Images/MaximizeDark.png</Bitmap>
             <Bitmap x:Key="MinimizeIcon">avares://NutritionTracker/Images/MinimizeDark.png</Bitmap>
+            <Bitmap x:Key="BurgerIcon">avares://NutritionTracker/Images/BurgerDark.png</Bitmap>
 
             <Color x:Key="BackgroundColour">#FF1A1A1A</Color>
             <Color x:Key="SeparatorColour">#FF5F5F5F</Color> 

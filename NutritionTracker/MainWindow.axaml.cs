@@ -13,13 +13,13 @@ namespace NutritionTracker;
 public partial class MainWindow : Window
 {
     //private DataStore DataStore { get;} 
-    private SettingsViewModel SettingsViewModel { get;}
-    private AboutViewModel AboutViewModel { get;}
+    private SettingsViewModel SettingsViewModel { get; }
+    private AboutViewModel AboutViewModel { get; }
     public MainWindow()
     {
         InitializeComponent();
 
-        var datastore =((App)Application.Current!).DataStore;
+        var datastore = ((App)Application.Current!).DataStore;
         DataContext = datastore;
         SettingsViewModel = new SettingsViewModel(datastore);
         AboutViewModel = new AboutViewModel();
@@ -35,8 +35,8 @@ public partial class MainWindow : Window
 
     private void OnTabSelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
-        if (sender is TabStrip tab 
-            && tab.SelectedItem is TabStripItem item 
+        if (sender is TabStrip tab
+            && tab.SelectedItem is TabStripItem item
             && ContentView is not null)
         {
             ContentView.Content = item.Tag switch
@@ -64,7 +64,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void TitleBar_PointerPressed(object sender,PointerPressedEventArgs e) 
+    private void TitleBar_PointerPressed(object sender, PointerPressedEventArgs e)
     {
         if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
         {
@@ -72,9 +72,14 @@ public partial class MainWindow : Window
         }
     }
     private void Minimize_Click(object sender, RoutedEventArgs e) => this.WindowState = WindowState.Minimized;
-    
-    private void Maximize_Click(object sender, RoutedEventArgs e) => 
+
+    private void Maximize_Click(object sender, RoutedEventArgs e) =>
         this.WindowState = this.WindowState == WindowState.Maximized ?
-            WindowState.Normal :WindowState.Maximized;
+            WindowState.Normal : WindowState.Maximized;
     private void Close_Click(object sender, RoutedEventArgs e) => Close();
+
+    private void PaneState_Click(object? sender, RoutedEventArgs e)
+    {
+        SideMenu_SplitView.IsPaneOpen = !SideMenu_SplitView.IsPaneOpen;
+    }
 }
