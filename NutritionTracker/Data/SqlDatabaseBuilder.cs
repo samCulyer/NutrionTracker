@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.Data.Sqlite;
-using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -57,20 +56,20 @@ public class SqlDatabaseBuilder
         //micrograms μg or mcg 1 millionth of a gram 
         //international units ui conversion depends on type of vitamin
         // 1 mg = 1000 mcg
-        command.CommandText = "INSERT INTO Ingredients (Id, Name, Unit) " +
-                              "VALUES (1, Calories, kcal), " +
-                              "(2, Calories, g), " +
-                              "(3, Protein, g), " +
-                              "(4, Carbs, g), " +
-                              "(5, Fat, g), " +
-                              "(6, Fibre, g), " +
-                              //Fat-soluble
-                              "(7, Vitamin A, mgc), " +
-                              "(8, Vitamin D, mgc), " +
-                              "(9, Vitamin K, mgc), " +
-                              "(10, Vitamin E, mgc), " +
-                              //water-soluble
-                              "(11, Vitamin C, mgc)";
+        command.CommandText = "INSERT OR IGNORE INTO Nutrients (Id, Name,NameAlternate, Unit) " +
+                               "VALUES (1, 'Calories',NULL, 'kcal'), " +
+                               "(2, 'Calories',null, 'g'), " +
+                               "(3, 'Protein',null, 'g'), " +
+                               "(4, 'Carbs',null, 'g'), " +
+                               "(5, 'Fat',null, 'g'), " +
+                               "(6, 'Fibre',null, 'g'), " +
+                               //Fat-soluble
+                               "(7, 'Vitamin A',null, 'mcg'), " +
+                               "(8, 'Vitamin D',null, 'mcg'), " +
+                               "(9, 'Vitamin K',null, 'mcg'), " +
+                               "(10, 'Vitamin E',null, 'mcg'), " +
+                               //water-soluble
+                               "(11, 'Vitamin C',null, 'mcg')";
         
         
         command.ExecuteNonQueryAsync();
