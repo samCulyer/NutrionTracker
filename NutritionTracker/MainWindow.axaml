@@ -10,7 +10,6 @@
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="32"
         PropertyChanged="MainWindow_PropertyChanged"
-        Title="Nutrition Tracker"
         Background="Transparent" FontSize="{Binding FontSize}">
     <Border Name="WindowBorder" CornerRadius="5" ClipToBounds="True" Classes="window">
 
@@ -20,7 +19,7 @@
                   PointerPressed="TitleBar_PointerPressed" Background="Transparent">
 
                 <TextBlock Grid.Column="1" VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" Text="Nutrition Tracker"/>
+                    HorizontalAlignment="Center" Text="{DynamicResource Title}"/>
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
                     <Button Click="Minimize_Click" DockPanel.Dock="Right" Classes="window-minmax">
@@ -35,11 +34,11 @@
                 </StackPanel>
             </Grid>
 
-            <SplitView Grid.Row="1" x:Name="SideMenu_SplitView" DisplayMode="CompactInline" IsPaneOpen="False" 
+            <SplitView Grid.Row="1" x:Name="SideMenu_SplitView" DisplayMode="CompactInline" IsPaneOpen="True" 
                        OpenPaneLength="180" CompactPaneLength="48" PaneBackground="Transparent" Margin="0,0,0,10" >
 				<SplitView.Pane>
-                    <Border BorderBrush="{DynamicResource SystemAccentColor}"
-                             BorderThickness="0,0,2,1"
+                    <Border BorderBrush="{DynamicResource SystemAccentColor}" Background="{DynamicResource PaneBrush}"
+                             BorderThickness="0,0,2,2"
                             CornerRadius="0,5,5,0">
                         <StackPanel>
 						<Button Click="PaneState_Click" Margin="10,10,0,0" Padding="5" Width="28">

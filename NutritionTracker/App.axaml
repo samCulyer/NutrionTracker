@@ -10,4 +10,12 @@
         <StyleInclude Source="avares://NutritionTracker/Resources/BaseStyles.axaml" />
     </Application.Styles>
 
+    <Application.Resources>
+		<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+              <MergeResourceInclude Source="avares://NutritionTracker/Resources/Language/English.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+          </ResourceDictionary>
+	</Application.Resources>
+
 </Application>

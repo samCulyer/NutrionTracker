@@ -16,7 +16,6 @@ namespace NutritionTracker
 
         public override void OnFrameworkInitializationCompleted()
         {
-            NutritionTracker.Resources.Lang.Resources.Culture = new CultureInfo("en-GB");
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow();
