@@ -37,9 +37,7 @@
             <SplitView Grid.Row="1" x:Name="SideMenu_SplitView" DisplayMode="CompactInline" IsPaneOpen="True" 
                        OpenPaneLength="180" CompactPaneLength="48" PaneBackground="Transparent" Margin="0,0,0,10" >
 				<SplitView.Pane>
-                    <Border BorderBrush="{DynamicResource SystemAccentColor}" Background="{DynamicResource PaneBrush}"
-                             BorderThickness="0,0,2,2"
-                            CornerRadius="0,5,5,0">
+                    <ContentControl Classes="panel" CornerRadius="0,5,5,0">
                         <StackPanel>
 						<Button Click="PaneState_Click" Margin="10,10,0,0" Padding="5" Width="28">
 							<Image Source="{DynamicResource BurgerIcon}" Width="19" Height="19"/>
@@ -96,7 +94,7 @@
                         </TabStrip>
                     </StackPanel>
 						
-                    </Border>
+                    </ContentControl>
                 </SplitView.Pane>
 
                 <ContentControl Grid.Column="2" Margin="10,0" Name="ContentView"/>

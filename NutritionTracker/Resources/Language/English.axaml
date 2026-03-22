@@ -1,4 +1,38 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:String x:Key="Title">Nutrition Tracker</x:String>
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:String x:Key="Title">Nutrition Tracker</x:String>
+
+    <!--SidePanel-->
+
+    <!--Info-->
+    <x:String x:Key="MacroNutrientsTitle">Macronutrients</x:String>
+
+    <x:String x:Key="CaloriesTitle">Calories</x:String>
+    <x:String x:Key="CaloriesInfo">
+        
+    </x:String>
+
+    <x:String x:Key="ProteinTitle">Protein</x:String>
+    <x:String x:Key="ProteinInfo">
+        Protein is an essential macronutrient.
+    </x:String>
+
+    <x:String x:Key="CarbohydratesTitle">Carbohydrates</x:String>
+    <x:String x:Key="CarbohydratesInfo">
+        
+    </x:String>
+
+    <x:String x:Key="FiberTitle">Fiber</x:String>
+    <x:String x:Key="FiberInfo">
+        
+    </x:String>
+
+    <x:String x:Key="FatTitle">Fats and Cholesterol</x:String>
+    <x:String x:Key="FatInfo">
+        
+    </x:String>
+
+  <x:String x:Key="MicroNutrientsTitle">Micronutrients</x:String>
+
+    
 </ResourceDictionary>

@@ -3,5 +3,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="NutritionTracker.InfoView" Background="Purple">
+             x:Class="NutritionTracker.InfoView">
+    <ScrollViewer>
+        <StackPanel Margin="5">
+            <ContentControl Classes="panel" Padding="5" Margin="0,0,15,5">
+                <StackPanel>
+		            <TextBlock Text="{DynamicResource MacroNutrientsTitle}" FontWeight="Bold" TextDecorations="Underline"/>
+		            <TextBlock Text="{DynamicResource CaloriesTitle}" FontWeight="SemiBold"/>
+		            <TextBlock Text="{DynamicResource CarbohydratesTitle}" FontWeight="SemiBold"/>
+		            <TextBlock Text="{DynamicResource FiberTitle}" FontWeight="SemiBold"/>
+		            <TextBlock Text="{DynamicResource FatTitle}" FontWeight="SemiBold"/>
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Classes="panel" Padding="5" Margin="0,0,15,5">
+                <StackPanel>
+		            <TextBlock Text="{DynamicResource MicroNutrientsTitle}" FontWeight="SemiBold" TextDecorations="Underline"/>
+                </StackPanel>
+            </ContentControl>
+	    
+        </StackPanel>
+		
+    </ScrollViewer>
 </UserControl>
