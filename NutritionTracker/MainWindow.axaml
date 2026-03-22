@@ -97,7 +97,7 @@
                     </ContentControl>
                 </SplitView.Pane>
 
-                <ContentControl Grid.Column="2" Margin="10,0" Name="ContentView"/>
+                <ContentControl Grid.Column="2" Margin="10,5,10,0" Name="ContentView"/>
             </SplitView>
 			
         </Grid>

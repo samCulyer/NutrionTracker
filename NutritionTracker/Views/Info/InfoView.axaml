@@ -5,10 +5,11 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="NutritionTracker.InfoView">
     <ScrollViewer>
-        <StackPanel Margin="5">
+        <StackPanel>
+		    <TextBlock Text="{DynamicResource MacroNutrientsTitle}" Margin="0,0,15,5" 
+                 FontWeight="Bold" TextDecorations="Underline"/>
             <ContentControl Classes="panel" Padding="5" Margin="0,0,15,5">
                 <StackPanel>
-		            <TextBlock Text="{DynamicResource MacroNutrientsTitle}" FontWeight="Bold" TextDecorations="Underline"/>
 		            <TextBlock Text="{DynamicResource CaloriesTitle}" FontWeight="SemiBold"/>
 		            <TextBlock Text="{DynamicResource CarbohydratesTitle}" FontWeight="SemiBold"/>
 		            <TextBlock Text="{DynamicResource FiberTitle}" FontWeight="SemiBold"/>
@@ -16,9 +17,49 @@
                 </StackPanel>
             </ContentControl>
 
+		    <TextBlock Text="{DynamicResource MicroNutrientsTitle}" Margin="0,0,15,5" 
+                 FontWeight="Bold" TextDecorations="Underline"/>
             <ContentControl Classes="panel" Padding="5" Margin="0,0,15,5">
                 <StackPanel>
-		            <TextBlock Text="{DynamicResource MicroNutrientsTitle}" FontWeight="SemiBold" TextDecorations="Underline"/>
+                    <TextBlock Text="{DynamicResource VitaminsTitle}" FontWeight="SemiBold" 
+                               TextDecorations="Underline"/>
+                    <TextBlock Text="{DynamicResource VitaminATitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB1Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB2Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB3Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB5Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB6Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB7Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB9Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminB12Title}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminCTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource CholineTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminDTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminETitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource VitaminKTitle}" FontWeight="SemiBold"/>
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Classes="panel" Padding="5" Margin="0,0,15,5">
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource MineralsTitle}" FontWeight="SemiBold" 
+                               TextDecorations="Underline"/>
+                    <TextBlock Text="{DynamicResource CalciumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource ChlorideTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource ChromiumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource CopperTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource FluorideTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource IodineTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource IronTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource MagnesiumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource ManganeseTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource MolybdenumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource NickelTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource PhosphorusTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource PotassiumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource SeleniumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource SodiumTitle}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{DynamicResource ZincTitle}" FontWeight="SemiBold"/>
                 </StackPanel>
             </ContentControl>
 	    

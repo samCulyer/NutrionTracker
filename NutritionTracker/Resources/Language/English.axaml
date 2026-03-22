@@ -32,7 +32,43 @@
         
     </x:String>
 
-  <x:String x:Key="MicroNutrientsTitle">Micronutrients</x:String>
+    <x:String x:Key="MicroNutrientsTitle">Micronutrients</x:String>
+
+    <x:String x:Key="VitaminsTitle">Vitamins</x:String>
+
+    <x:String x:Key="VitaminATitle">Vitamin A</x:String>
+    <x:String x:Key="VitaminB1Title">Vitamin B1 (Thiamin)</x:String>
+    <x:String x:Key="VitaminB2Title">Vitamin B2 (Riboflavin)</x:String>
+    <x:String x:Key="VitaminB3Title">Vitamin B3 (Niacin)</x:String>
+    <x:String x:Key="VitaminB5Title">Vitamin B5 (Pantothenic Acid)</x:String>
+    <x:String x:Key="VitaminB6Title">Vitamin B6 (pyridoxal)</x:String>
+    <x:String x:Key="VitaminB7Title">Vitamin B7 (Biotin)</x:String>
+    <x:String x:Key="VitaminB9Title">Vitamin B9 (Folic acid)</x:String>
+    <x:String x:Key="VitaminB12Title">Vitamin B12</x:String>
+    <x:String x:Key="VitaminCTitle">Vitamin C</x:String>
+    <x:String x:Key="CholineTitle">Choline</x:String>
+    <x:String x:Key="VitaminDTitle">Vitamin D (calciferol)</x:String>
+    <x:String x:Key="VitaminETitle">Vitamin E (alpha-tocopherol)</x:String>
+    <x:String x:Key="VitaminKTitle">Vitamin K (phylloquinone, menadione)</x:String>
+
+    <x:String x:Key="MineralsTitle">Minerals</x:String>
+
+    <x:String x:Key="CalciumTitle">Calcium</x:String>
+    <x:String x:Key="ChlorideTitle">Chloride</x:String>
+    <x:String x:Key="ChromiumTitle">Chromium</x:String>
+    <x:String x:Key="CopperTitle">Copper</x:String>
+    <x:String x:Key="FluorideTitle">Fluoride</x:String>
+    <x:String x:Key="IodineTitle">Iodine</x:String>
+    <x:String x:Key="IronTitle">Iron</x:String>
+    <x:String x:Key="MagnesiumTitle">Magnesium</x:String>
+    <x:String x:Key="ManganeseTitle">Manganese</x:String>
+    <x:String x:Key="MolybdenumTitle">Molybdenum</x:String>
+    <x:String x:Key="NickelTitle">Nickel</x:String>
+    <x:String x:Key="PhosphorusTitle">Phosphorus</x:String>
+    <x:String x:Key="PotassiumTitle">Potassium</x:String>
+    <x:String x:Key="SeleniumTitle">Selenium</x:String>
+    <x:String x:Key="SodiumTitle">Sodium</x:String>
+    <x:String x:Key="ZincTitle">Zinc</x:String>
 
     
 </ResourceDictionary>
